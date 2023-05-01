@@ -10,11 +10,11 @@ function login(user) {
     userId.innerHTML = user;
 }
 
-function logout() {
-    localStorage.clear();
-    signin.className = "signin signin_active";
-    welcome.className = "welcome";
-}
+//function logout() {
+ //   localStorage.clear();
+ //   signin.className = "signin signin_active";
+ //   welcome.className = "welcome";
+//}
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -43,4 +43,4 @@ window.addEventListener("DOMContentLoaded", function() {
     };
 });
 
-signoutBtn.addEventListener("click", logout());
+//signoutBtn.addEventListener("click", logout());
