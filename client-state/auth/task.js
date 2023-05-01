@@ -8,13 +8,13 @@ function login(user) {
     signin.classList.toggle('signin_active');
     welcome.classList.toggle('welcome_active');
     userId.innerHTML = user;
-}
+};
 
-//function logout() {
- //   localStorage.clear();
- //   signin.className = "signin signin_active";
- //   welcome.className = "welcome";
-//}
+function logout() {
+    signin.className = "signin signin_active";
+    welcome.className = "welcome";
+    localStorage.removeItem("user_id")
+};
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -37,10 +37,9 @@ form.addEventListener("submit", function(event) {
 
 window.addEventListener("DOMContentLoaded", function() {
     let localId = localStorage.getItem("user_id");
-    console.log(localId)
     if (localId) {
         login(localId);
     };
 });
 
-//signoutBtn.addEventListener("click", logout());
+signoutBtn.addEventListener("click", logout);
